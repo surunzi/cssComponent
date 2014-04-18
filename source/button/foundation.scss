@@ -1,0 +1,69 @@
+// Button in foundation style
+
+@mixin btn-style($name, $bg-color, $bg-color-dark, $color) {
+    .btn.#{$name} {
+        background-color: $bg-color;
+        color: $color;
+        &:hover {
+            background-color: $bg-color-dark;
+        }
+    }
+
+    .btn.#{$name}.disabled {
+        &:hover {
+            background: $bg-color;
+        }
+    }
+}
+
+$bg-color-danger: #f04124;
+$bg-color-danger-dark: #cf280e;
+$bg-color-default: #e7e7e7;
+$bg-color-default-dark: #b9b9b9;
+$bg-color-primary: #008CBA;
+$bg-color-primary-dark: #007295;
+$bg-color-success: #43AC6A;
+$bg-color-success-dark: #368a54;
+
+$color: #fff;
+$color-dark: #333;
+
+$font-size: 0.88889rem;
+$font-size-mini: 0.61111rem;
+$font-size-small: 0.72222rem;
+
+$margin: 0 0 1.11111rem;
+
+$padding: 0.88889rem 1.77778rem 0.94444rem 1.77778rem;
+$padding-mini: 0.55556rem 1.11111rem 0.61111rem 1.11111rem;
+$padding-small: 0.77778rem 1.55556rem 0.83333rem 1.55556rem;
+
+.btn {
+    border: none;
+    cursor: pointer;
+    font-size: 0.88889rem;
+    margin: $margin;
+    outline: none;
+    padding: $padding;
+    transition: background-color 300ms ease-out;
+}
+
+.btn.disabled {
+    cursor: default;
+    opacity: 0.7;
+}
+
+.btn.small {
+    padding: $padding-small;
+    font-size: $font-size-small;
+}
+
+.btn.mini {
+    padding: $padding-mini;
+    font-size: $font-size-mini;
+}
+
+@include btn-style(default, $bg-color-default, $bg-color-default-dark, $color-dark);
+@include btn-style(primary, $bg-color-primary, $bg-color-primary-dark, $color);
+@include btn-style(danger, $bg-color-danger, $bg-color-danger-dark, $color);
+@include btn-style(success, $bg-color-success, $bg-color-success-dark, $color);

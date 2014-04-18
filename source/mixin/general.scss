@@ -1,0 +1,7 @@
+// Add vendor prefix to arguments
+@mixin arg-vendor-prefix($name, $argument) {
+    #{$name}: -webkit-#{$argument};
+    #{$name}: -moz-#{$argument};
+    #{$name}: -ms-#{$argument};
+    #{$name}: #{$argument};
+}

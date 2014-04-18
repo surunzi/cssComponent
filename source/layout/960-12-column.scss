@@ -1,0 +1,44 @@
+// 960-12-column The whole container is 960px width, and is devided into 12 columns.
+
+$width: 960px;
+$margin-v: 5px;
+$padding: 10px 15px;
+
+body {
+    margin: 0;
+}
+
+.container {
+    width: $width;
+    margin: $margin-v auto;
+}
+
+.container > .row {
+    display: table;
+    margin-bottom: $margin-v;
+}
+
+.container > .row > * {
+    box-sizing: border-box;
+    display: inline-block;
+    float: left;
+    padding: $padding;
+}
+
+.container.display .row {
+    height: 50px;
+}
+
+.container.display .row > * {
+    background-color: #eee;
+    border: 1px solid rgba(86,61,124,.2);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+@for $i from 1 to 12 {
+    .row > .col-#{$i} {
+        width: $width / 12 * $i;
+    }
+}

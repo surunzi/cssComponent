@@ -45,12 +45,17 @@ $padding-small: 0.77778rem 1.55556rem 0.83333rem 1.55556rem;
     margin: $margin;
     outline: none;
     padding: $padding;
+    text-decoration: none;
     transition: background-color 300ms ease-out;
 }
 
 .btn.disabled {
     cursor: default;
     opacity: 0.7;
+}
+
+.btn.round {
+    border-radius: 1000px;
 }
 
 .btn.small {

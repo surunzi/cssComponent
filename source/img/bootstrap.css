@@ -1,0 +1,18 @@
+.img {
+  display: inline-block;
+  margin: 10px;
+  max-width: 100%; }
+
+.img.round {
+  border-radius: 6px; }
+
+.img.circle {
+  border-radius: 1000px; }
+
+.img.polaroid {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 4px; }
+
+/*# sourceMappingURL=bootstrap.css.map */

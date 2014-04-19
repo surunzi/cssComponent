@@ -1,0 +1,16 @@
+body {
+    background: url(bg0.png) fixed;
+}
+.row > * {
+    padding: 5px;
+}
+.row .img {
+    opacity: 0.6;
+    cursor: pointer;
+    height: 200px;
+    width: 420px;
+    transition: opacity 0.3s;
+}
+.row .img:hover {
+    opacity: 1;
+}

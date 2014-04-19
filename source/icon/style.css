@@ -1,0 +1,13 @@
+.container {
+    width: 960px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
+
+.container li {
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 15px;
+    width: 235px;
+}

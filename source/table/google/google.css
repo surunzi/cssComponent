@@ -1,0 +1,28 @@
+.table {
+  border-collapse: collapse; }
+
+.table th, .table td {
+  padding: 6px 10px;
+  text-align: left;
+  vertical-align: middle; }
+
+.table th {
+  background: #6199df;
+  border: 1px solid #4d90fe;
+  color: white; }
+.table td {
+  border: 1px solid #bbbbbb; }
+
+.table.green th {
+  background: #00a556;
+  border-color: #087e46; }
+
+.table.red th {
+  background: #d94632;
+  border-color: #b23322; }
+
+.table.yellow th {
+  background: #ffc640;
+  border-color: #c79622; }
+
+/*# sourceMappingURL=google.css.map */

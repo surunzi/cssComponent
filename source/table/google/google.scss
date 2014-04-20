@@ -1,0 +1,45 @@
+@mixin style($name, $bg-color, $border-color) {
+    .table.#{$name} {
+        th {
+            background: $bg-color;
+            border-color: $border-color;
+        }
+    }
+}
+
+$td-border-color: #bbb;
+$th-border-color: #4d90fe;
+$th-border-color-green: #087e46;
+$th-border-color-red: #b23322;
+$th-border-color-yellow: #c79622;
+$th-bg-color: #6199df;
+$th-bg-color-green: #00a556;
+$th-bg-color-red: #d94632;
+$th-bg-color-yellow: #ffc640;
+$th-color: #fff;
+$padding: 6px 10px;
+
+.table {
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: $padding;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table {
+    th {
+        background: $th-bg-color;
+        border: 1px solid $th-border-color;
+        color: $th-color;
+    }
+    td {
+        border: 1px solid $td-border-color;
+    }
+}
+
+@include style(green, $th-bg-color-green, $th-border-color-green);
+@include style(red, $th-bg-color-red, $th-border-color-red);
+@include style(yellow, $th-bg-color-yellow, $th-border-color-yellow);

@@ -5,3 +5,27 @@
     #{$name}: -ms-#{$argument};
     #{$name}: #{$argument};
 }
+
+// Add keyframes prefix
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
+
+// Add vendor prefix
+@mixin vendor-prefix($name, $argument) {
+    -webkit-#{$name}: $argument;
+    -moz-#{$name}: $argument;
+    -ms-#{$name}: $argument;
+    #{$name}: $argument;
+}

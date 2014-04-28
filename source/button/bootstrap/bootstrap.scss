@@ -1,6 +1,6 @@
 // Button in Bootstrap style
 
-@import "../mixin/general.scss";
+@import "../../mixin/general.scss";
 
 @mixin btn-type($name, $bg-color, $bg-image, $border-color, $color) {
     .btn.#{$name} {

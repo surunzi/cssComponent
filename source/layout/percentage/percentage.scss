@@ -1,10 +1,11 @@
-// 960-12-column The whole container is 960px width, and is devided into 12 columns.
+// percentage 12columns max-width is 1200px, layout changed when screen width is below 768px
 
-$width: 960px;
+$max-width: 1200px;
 $padding: 10px 15px;
 
 .container {
-    width: $width;
+    width: 100%;
+    max-width: $max-width;
     margin: 0 auto;
 }
 
@@ -22,18 +23,12 @@ $padding: 10px 15px;
 
 @for $i from 1 to 12 {
     .row > .col-#{$i} {
-        width: $width / 12 * $i;
+        width: 100 / 12 * $i#{'%'};
     }
 }
 
-@media screen and (max-width: 960px) {
-    .container {
-        width: 100%;
-    }
-    
+@media screen and (max-width: 768px) {
     .container > .row > * {
-        display: block;
-        float: none;
         width: 100%;
     }
 }

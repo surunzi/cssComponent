@@ -1,10 +1,6 @@
-.container.display .row {
-    height: 50px;
-}
-
 .container.display .row > * {
     background-color: #eee;
     border: 1px solid rgba(86,61,124,.2);
     border-radius: 2px;
-    height: 100%;
+    min-height: 50px;
 }
